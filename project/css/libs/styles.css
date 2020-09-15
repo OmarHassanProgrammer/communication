@@ -1,0 +1,792 @@
+.radio-custom {
+    
+    display: inline-block;
+    margin:13px 5px;
+    font-family: Arial, "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+.radio-custom input {  
+    display: none  
+}
+.radio-custom label {
+    cursor: pointer;
+    font-weight: 600
+}
+
+.radio-custom.style-1 {
+    display:block
+}
+
+.radio-custom.style-1 label:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: 0px;
+}
+
+.radio-custom.style-1 :checked  ~ label:after {
+    
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+}
+
+.radio-custom.style-1 label{
+    margin-left: 30px
+}
+
+.radio-custom.style-1 :checked  ~ label{
+    margin-left: 40px
+}
+
+.radio-custom.style-1 label:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: -17px;
+    
+    transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    
+    transition: all .7s ease;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -o-transition: all .7s ease;
+}
+
+.radio-custom.style-1 label {
+    transition: all .7s ease;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    position: relative;
+}
+
+.radio-custom.style-1.theme-1 label:before {background-color: #e2ffff;border: .5px solid #0ff;}
+.radio-custom.style-1.theme-1 :checked  ~ label {color: #2f5405}
+.radio-custom.style-1.theme-1 label:after {background-color: #2f5405}
+.radio-custom.style-1.theme-1 label {color: #077}
+
+.radio-custom.style-1.theme-2 label:before {background-color: #fff;border: .5px solid #6353a2;}
+.radio-custom.style-1.theme-2 :checked  ~ label {color: #1121e4}
+.radio-custom.style-1.theme-2 label:after {background-color: #1121e4}
+.radio-custom.style-1.theme-2 label {color: #afb1ed}
+
+.radio-custom.style-1.theme-3 label:before {background-color: #e0d5ab;border: .5px solid #f36626;}
+.radio-custom.style-1.theme-3 :checked  ~ label {color: #dc3e5b}
+.radio-custom.style-1.theme-3 label:after {background-color: #dc3e5b}
+.radio-custom.style-1.theme-3 label {color: #de7474}
+
+.radio-custom.style-1.theme-4 label:before {background-color: #f7d8f6;border: .5px solid #9e0cf9;}
+.radio-custom.style-1.theme-4 :checked  ~ label {color: #d311ea}
+.radio-custom.style-1.theme-4 label:after {background-color: #d311ea}
+.radio-custom.style-1.theme-4 label {color: #e57de6}
+
+.radio-custom.style-1.theme-5 label:before {background-color: #a3a6f7;border: .5px solid #1c0dff;}
+.radio-custom.style-1.theme-5 :checked  ~ label {color: #701870}
+.radio-custom.style-1.theme-5 label:after {background-color: #701870}
+.radio-custom.style-1.theme-5 label {color:#ad72ad;}
+
+.radio-custom.style-1.theme-6 label:before {background-color: #fec6ff;border: .5px solid #460063;}
+.radio-custom.style-1.theme-6 :checked  ~ label {color: #540552}
+.radio-custom.style-1.theme-6 label:after {background-color: #540552}
+.radio-custom.style-1.theme-6 label {color: #ff00c8}
+
+.radio-custom.style-1.theme-7 label:before {background-color: #ebf197;border: .5px solid #ff1800;}
+.radio-custom.style-1.theme-7 :checked  ~ label {color: #9e4302}
+.radio-custom.style-1.theme-7 label:after {background-color: #9e4302}
+.radio-custom.style-1.theme-7 label {color: #e08b4e}
+
+.radio-custom.style-1.theme-8 label:before {background-color: #ceffdf;border: .5px solid #000;}
+.radio-custom.style-1.theme-8 :checked  ~ label {color: #00aa61}
+.radio-custom.style-1.theme-8 label:after {background-color: #00aa61}
+.radio-custom.style-1.theme-8 label {color: #97f7e1}
+
+.radio-custom.style-1.theme-9 label:before {background-color: #cacaca;border: .5px solid #000;}
+.radio-custom.style-1.theme-9 :checked  ~ label {color: #000}
+.radio-custom.style-1.theme-9 label:after {background-color: #000}
+.radio-custom.style-1.theme-9 label {color: #6f6a6a}
+
+
+.radio-custom.style-2 {
+    border:2px dotted;
+    display:inline-block;
+    border-radius: 30px;
+    padding:15px;
+    cursor: pointer;
+}
+
+.radio-custom.style-2 label {
+    min-width:100px;
+    position: relative;
+    transition: all .7s ease;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -o-transition: all .7s ease;
+}
+
+.radio-custom.style-2 :checked ~ label:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f00c";
+    position: absolute;
+    left: -5px;
+    top: 1px;
+}
+
+.radio-custom.style-2 :checked ~ label {
+    padding-left: 20px
+}
+
+.radio-custom.style-2.theme-1 {border-color:#0ff; background-color: #e2ffff}
+.radio-custom.style-2.theme-1 :checked ~ label:before {color: #2f5405}
+.radio-custom.style-2.theme-1 :checked ~ label {color: #2f5405;}
+.radio-custom.style-2.theme-1 label {color: #077;}
+
+.radio-custom.style-2.theme-2 {background-color: #fff;border-color:#6353a2;}
+.radio-custom.style-2.theme-2 :checked ~ label:before {color: #1121e4}
+.radio-custom.style-2.theme-2 :checked ~ label {color: #1121e4}
+.radio-custom.style-2.theme-2 label {color: #afb1ed}
+
+.radio-custom.style-2.theme-3 {background-color: #e0d5ab;border-color:#f36626;}
+.radio-custom.style-2.theme-3 :checked ~ label:before {color: #dc3e5b}
+.radio-custom.style-2.theme-3 :checked ~ label {color: #dc3e5b}
+.radio-custom.style-2.theme-3 label {color: #de7474}
+
+.radio-custom.style-2.theme-4 {background-color: #f7d8f6;border-color:#9e0cf9;}
+.radio-custom.style-2.theme-4 :checked ~ label:before {color: #d311ea}
+.radio-custom.style-2.theme-4 :checked ~ label {color: #d311ea}
+.radio-custom.style-2.theme-4 label {color: #e57de6}
+
+.radio-custom.style-2.theme-5 {background-color: #a3a6f7;border-color:#1c0dff;}
+.radio-custom.style-2.theme-5 :checked ~ label:before {color: #701870}
+.radio-custom.style-2.theme-5 :checked ~ label {color: #701870}
+.radio-custom.style-2.theme-5 label {color:#ad72ad;}
+
+.radio-custom.style-2.theme-6 {background-color: #fec6ff;border-color: #460063;}
+.radio-custom.style-2.theme-6 :checked ~ label:before {color: #540552}
+.radio-custom.style-2.theme-6 :checked ~ label {color: #540552}
+.radio-custom.style-2.theme-6 label {color: #ff00c8}
+
+.radio-custom.style-2.theme-7 {background-color: #ebf197;border-color: #ff1800;}
+.radio-custom.style-2.theme-7 :checked ~ label:before {color: #9e4302}
+.radio-custom.style-2.theme-7 :checked ~ label {color: #9e4302}
+.radio-custom.style-2.theme-7 label {color: #e08b4e}
+
+.radio-custom.style-2.theme-8 {background-color: #ceffdf;border-color: #000;}
+.radio-custom.style-2.theme-8 :checked ~ label:before {color: #00aa61}
+.radio-custom.style-2.theme-8 :checked ~ label {color: #00aa61}
+.radio-custom.style-2.theme-8 label {color: #97f7e1}
+
+.radio-custom.style-2.theme-9 {background-color: #cacaca;border-color: #000;}
+.radio-custom.style-2.theme-9 :checked ~ label:before {color: #000}
+.radio-custom.style-2.theme-9 :checked ~ label {color: #000}
+.radio-custom.style-2.theme-9 label {color: #6f6a6a}
+
+.radio-custom.style-2 {border-style: dotted; border-width:2px}
+
+.radio-custom.style-3 {
+    display: block;
+    margin-bottom: 25px
+}
+
+.radio-custom.style-3 label {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    position: relative;
+    transition: all .7s ease;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -o-transition: all .7s ease;
+}
+
+.radio-custom.style-3 label:after {
+    content: "\f005";
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 6px;
+    right: -31px;
+    font-size: 20px;
+    opacity: 0
+}
+
+.radio-custom.style-3 label:before {
+    content: "\f550";
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 6px;
+    right: -51px;
+    font-size: 20px;
+    opacity: 0
+}
+
+.radio-custom.style-3 label:after {/*
+    transition: opacity .3s ease,
+                left 3.5s ease;
+    -webkit-transition: opacity .3s ease,
+                left 3.5s ease;
+    -moz-transition: opacity .3s ease,
+                left 3.5s ease;
+    -o-transition: opacity .3s ease,
+                left 3.5s ease;*/
+}
+
+.radio-custom.style-3 label:before {/*
+    transition: opacity .3s ease,
+                left 3.8s ease;
+    -webkit-transition: opacity .3s ease,
+                left 3.8s ease;
+    -moz-transition: opacity .3s ease,
+                left 3.8s ease;
+    -o-transition: opacity .3s ease,
+                left 3.8s ease;*/
+}
+
+.radio-custom.style-3 :checked ~ label:before {
+    animation: star_tail_move 3.8s ease-in-out 1;
+    -webkit-animation: star_tail_move 3.8s ease-in-out 1;
+    -moz-animation: star_tail_move 3.8s ease-in-out 1;
+    -o-animation: star_tail_move 3.8s ease-in-out 1;
+}
+
+.radio-custom.style-3 :checked ~ label:after {
+    animation: star_move 3.8s ease-in-out 1;
+    -webkit-animation: star_move 3.8s ease-in-out 1;
+    -moz-animation: star_move 3.8s ease-in-out 1;
+    -o-animation: star_move 3.8s ease-in-out 1;
+}
+
+@keyframes star_move {
+    0% {
+        opacity: 0;
+        right: -31px
+    }
+    10% {
+        opacity: 1;
+    }
+    75% {
+        right:200px;
+        opacity: 1
+    }
+    80% {
+        right:200px;
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes star_move {
+    0% {
+        opacity: 0;
+        right: -31px
+    }
+    10% {
+        opacity: 1;
+    }
+    75% {
+        right:200px;
+        opacity: 1
+    }
+    80% {
+        right:200px;
+        opacity: 0
+    }
+}
+
+@-moz-keyframes star_move {
+    0% {
+        opacity: 0;
+        right: -31px
+    }
+    10% {
+        opacity: 1;
+    }
+    75% {
+        right:200px;
+        opacity: 1
+    }
+    80% {
+        right:200px;
+        opacity: 0
+    }
+}
+
+@-o-keyframes star_move {
+    0% {
+        opacity: 0;
+        right: -31px
+    }
+    10% {
+        opacity: 1;
+    }
+    75% {
+        right:200px;
+        opacity: 1
+    }
+    80% {
+        right:200px;
+        opacity: 0
+    }
+}
+
+@keyframes star_tail_move {
+    0% {
+        opacity: 0;
+        right: -51px
+    }
+    10% {
+        opacity: 1;
+    }
+    75% {
+        right:180px;
+        opacity: 1
+    }
+    80% {
+        right:180px;
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes star_tail_move {
+    0% {
+        opacity: 0;
+        right: -51px
+    }
+    10% {
+        opacity: 1;
+    }
+    75% {
+        right:180px;
+        opacity: 1
+    }
+    80% {
+        right:180px;
+        opacity: 0
+    }
+}
+
+@-moz-keyframes star_tail_move {
+    0% {
+        opacity: 0;
+        right: -51px
+    }
+    10% {
+        opacity: 1;
+    }
+    75% {
+        right:180px;
+        opacity: 1
+    }
+    80% {
+        right:180px;
+        opacity: 0
+    }
+}
+
+@-o-keyframes star_tail_move {
+    0% {
+        opacity: 0;
+        right: -51px
+    }
+    10% {
+        opacity: 1;
+    }
+    75% {
+        right:180px;
+        opacity: 1
+    }
+    80% {
+        right:180px;
+        opacity: 0
+    }
+}
+
+
+.radio-custom.style-3.theme-1 label {border-color: #0ff; color: #077}
+.radio-custom.style-3.theme-1 :checked ~ label {background-color: #e2ffff; color: #2f5405}
+.radio-custom.style-3.theme-1 label:after {color: #2f5405}
+.radio-custom.style-3.theme-1 label:before {color: #077}
+
+.radio-custom.style-3.theme-2 label {border-color: #6353a2; color: #afb1ed}
+.radio-custom.style-3.theme-2 :checked ~ label {background-color: #fff; color: #1121e4}
+.radio-custom.style-3.theme-2 label:after {color: #1121e4}
+.radio-custom.style-3.theme-2 label:before {color: #afb1ed}
+
+.radio-custom.style-3.theme-3 label {border-color: #f36626; color: #de7474}
+.radio-custom.style-3.theme-3 :checked ~ label {background-color: #e0d5ab; color: #dc3e5b}
+.radio-custom.style-3.theme-3 label:after {color: #dc3e5b}
+.radio-custom.style-3.theme-3 label:before {color: #de7474}
+
+.radio-custom.style-3.theme-4 label {border-color: #9e0cf9; color: #e57de6}
+.radio-custom.style-3.theme-4 :checked ~ label {background-color: #f7d8f6; color: #d311ea}
+.radio-custom.style-3.theme-4 label:after {color: #d311ea}
+.radio-custom.style-3.theme-4 label:before {color: #e57de6}
+
+.radio-custom.style-3.theme-5 label {border-color: #1c0dff; color: #ad72ad}
+.radio-custom.style-3.theme-5 :checked ~ label {background-color: #a3a6f7; color: #701870}
+.radio-custom.style-3.theme-5 label:after {color: #701870}
+.radio-custom.style-3.theme-5 label:before {color: #ad72ad}
+
+.radio-custom.style-3.theme-6 label {border-color: #460063; color: #ff00c8}
+.radio-custom.style-3.theme-6 :checked ~ label {background-color: #fec6ff; color: #540552}
+.radio-custom.style-3.theme-6 label:after {color: #540552}
+.radio-custom.style-3.theme-6 label:before {color: #ff00c8}
+
+.radio-custom.style-3.theme-7 label {border-color: #ff1800; color: #e08b4e}
+.radio-custom.style-3.theme-7 :checked ~ label {background-color: #ebf197; color: #9e4302}
+.radio-custom.style-3.theme-7 label:after {color: #9e4302}
+.radio-custom.style-3.theme-7 label:before {color: #e08b4e}
+
+.radio-custom.style-3.theme-8 label {border-color: #000; color: #97f7e1}
+.radio-custom.style-3.theme-8 :checked ~ label {background-color: #ceffdf; color: #00aa61}
+.radio-custom.style-3.theme-8 label:after {color: #00aa61}
+.radio-custom.style-3.theme-8 label:before {color: #97f7e1}
+
+.radio-custom.style-3.theme-9 label {border-color: #000; color: #6f6a6a}
+.radio-custom.style-3.theme-9 :checked ~ label {background-color: #cacaca; color: #000}
+.radio-custom.style-3.theme-9 label:after {color: #000}
+.radio-custom.style-3.theme-9 label:before {color: #6f6a6a}
+
+.radio-custom.style-4 label {
+    padding: 20px;
+    border-radius: 40px;
+    position: relative;
+    transition: all 2.5s cubic-bezier(0, 0.8, 0, -0.24) ;
+    -webkit-transition: all 2.5s cubic-bezier(0, 0.8, 0, -0.24);
+    -moz-transition: all 2.5s cubic-bezier(0, 0.8, 0, -0.24);
+    -o-transition: all 2.5s cubic-bezier(0, 0.8, 0, -0.24);
+    
+    
+    transition: border .5s cubic-bezier(0, 0.8, 0, -0.24) 1.5s;
+    -webkit-transition: border .5s cubic-bezier(0, 0.8, 0, -0.24) 1.5s;
+    -moz-transition: border .5s cubic-bezier(0, 0.8, 0, -0.24) 1.5s;
+    -o-transition: border .5s cubic-bezier(0, 0.8, 0, -0.24) 1.5s;
+}
+
+.radio-custom.style-4 label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    border-radius: 40px;
+    transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    z-index: -1
+}
+
+.radio-custom.style-4 :checked ~ label:before {
+    width: 100%;
+}
+
+.radio-custom.style-4.theme-1 label:before {background-color: #2f5405;}
+.radio-custom.style-4.theme-1 :checked ~ label {color: #e2ffff}
+.radio-custom.style-4.theme-1 label {color: #077;border:1px solid #0ff;}
+
+.radio-custom.style-4.theme-2 label:before {background-color: #2a3aff;}
+.radio-custom.style-4.theme-2 :checked ~ label {color: #fff}
+.radio-custom.style-4.theme-2 label {color: #077;border:1px solid #6353a2;}
+
+.radio-custom.style-4.theme-3 label:before {background-color: #dc3e5b;}
+.radio-custom.style-4.theme-3 :checked ~ label {color: #e0d5ab}
+.radio-custom.style-4.theme-3 label {color: #de7474;border:1px solid #f36626;}
+
+.radio-custom.style-4.theme-4 label:before {background-color: #d311ea;}
+.radio-custom.style-4.theme-4 :checked ~ label {color: #f7d8f6}
+.radio-custom.style-4.theme-4 label {color: #e57de6;border:1px solid #9e0cf9;}
+
+.radio-custom.style-4.theme-5 label:before {background-color: #701870;}
+.radio-custom.style-4.theme-5 :checked ~ label {color: #a3a6f7}
+.radio-custom.style-4.theme-5 label {color: #ad72ad;border:1px solid #1c0dff;}
+
+.radio-custom.style-4.theme-6 label:before {background-color: #540552;}
+.radio-custom.style-4.theme-6 :checked ~ label {color: #fec6ff}
+.radio-custom.style-4.theme-6 label {color: #ff00c8;border:1px solid #460063;}
+
+.radio-custom.style-4.theme-7 label:before {background-color: #9e4302;}
+.radio-custom.style-4.theme-7 :checked ~ label {color: #ebf197}
+.radio-custom.style-4.theme-7 label {color: #e08b4e;border:1px solid #ff1800;}
+
+.radio-custom.style-4.theme-8 label:before {background-color: #00aa61;}
+.radio-custom.style-4.theme-8 :checked ~ label {color: #ceffdf}
+.radio-custom.style-4.theme-8 label {color: #97f7e1;border:1px solid #000;}
+
+.radio-custom.style-4.theme-9 label:before {background-color: #000;}
+.radio-custom.style-4.theme-9 :checked ~ label {color: #cacaca}
+.radio-custom.style-4.theme-9 label {color: #6f6a6a;border:1px solid #000;}
+
+
+.radio-custom.style-4 :checked ~ label {border-color: transparent}
+
+
+ul.radio-custom.style-5 {
+    padding: 0;
+    width:auto;
+} 
+
+ul.radio-custom.style-5 li label{
+    display: block;
+    margin: 0;
+    padding: 10px;
+    transition: all 1s ease;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    font-size: 15px;
+    text-align:center
+}
+
+ul.radio-custom.style-5 li, ul.radio-custom.style-3 li{
+    list-style: none;
+}
+
+ul.radio-custom.style-5 li :checked ~ label{
+    font-size: 25px;
+    color: #ddd;
+    background-color: #555
+}
+
+ul.radio-custom.style-5.theme-1 {border:1.5px solid #0ff; background-color: #e2ffff}
+ul.radio-custom.style-5.theme-1 li {border-bottom: 1.5px solid #0ff;}
+ul.radio-custom.style-5.theme-1 li label{color: #077}
+ul.radio-custom.style-5.theme-1 li :checked ~ label{color: #e2ffff; background-color: #2f5405}
+
+ul.radio-custom.style-5.theme-2 {border:1.5px solid #6353a2; background-color: #fff}
+ul.radio-custom.style-5.theme-2 li {border-bottom: 1.5px solid #6353a2;}
+ul.radio-custom.style-5.theme-2 li label{color: #afb1ed}
+ul.radio-custom.style-5.theme-2 li :checked ~ label{color: #fff; background-color: #1121e4}
+
+ul.radio-custom.style-5.theme-3 {border:1.5px solid #f36626; background-color: #e0d5ab}
+ul.radio-custom.style-5.theme-3 li {border-bottom: 1.5px solid #f36626;}
+ul.radio-custom.style-5.theme-3 li label{color: #de7474}
+ul.radio-custom.style-5.theme-3 li :checked ~ label{color: #e0d5ab; background-color: #dc3e5b}
+
+ul.radio-custom.style-5.theme-4 {border:1.5px solid #9e0cf9; background-color: #f7d8f6}
+ul.radio-custom.style-5.theme-4 li {border-bottom: 1.5px solid #9e0cf9;}
+ul.radio-custom.style-5.theme-4 li label{color: #e57de6}
+ul.radio-custom.style-5.theme-4 li :checked ~ label{color: #f7d8f6; background-color: #d311ea}
+
+ul.radio-custom.style-5.theme-5 {border:1.5px solid #1c0dff; background-color: #a3a6f7}
+ul.radio-custom.style-5.theme-5 li {border-bottom: 1.5px solid #1c0dff;}
+ul.radio-custom.style-5.theme-5 li label{color: #ad72ad}
+ul.radio-custom.style-5.theme-5 li :checked ~ label{color: #a3a6f7; background-color: #701870}
+
+ul.radio-custom.style-5.theme-6 {border:1.5px solid #460063; background-color: #fec6ff}
+ul.radio-custom.style-5.theme-6 li {border-bottom: 1.5px solid #460063;}
+ul.radio-custom.style-5.theme-6 li label{color: #ff00c8}
+ul.radio-custom.style-5.theme-6 li :checked ~ label{color: #fec6ff; background-color: #540552}
+
+ul.radio-custom.style-5.theme-7 {border:1.5px solid #ff1800; background-color: #ebf197}
+ul.radio-custom.style-5.theme-7 li {border-bottom: 1.5px solid #ff1800;}
+ul.radio-custom.style-5.theme-7 li label{color: #e08b4e}
+ul.radio-custom.style-5.theme-7 li :checked ~ label{color: #ebf197; background-color: #9e4302}
+
+ul.radio-custom.style-5.theme-8 {border:1.5px solid #000; background-color: #ceffdf}
+ul.radio-custom.style-5.theme-8 li {border-bottom: 1.5px solid #000;}
+ul.radio-custom.style-5.theme-8 li label{color: #97f7e1}
+ul.radio-custom.style-5.theme-8 li :checked ~ label{color: #ceffdf; background-color: #00aa61}
+
+ul.radio-custom.style-5.theme-9 {border:1.5px solid #000; background-color: #cacaca}
+ul.radio-custom.style-5.theme-9 li {border-bottom: 1.5px solid #000;}
+ul.radio-custom.style-5.theme-9 li label{color: #6f6a6a}
+ul.radio-custom.style-5.theme-9 li :checked ~ label{color: #cacaca; background-color: #000}
+
+
+ul.radio-custom.style-5 li:last-child{
+    border:none
+}
+
+.radio-custom.style-gold {
+    display:block
+}
+
+.radio-custom.style-gold label {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+        
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.radio-custom.style-gold label:before {
+    content: "";
+    width: 101%;
+    height:2px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.radio-custom.style-gold :checked ~ label:before {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1);    
+}
+
+.radio-custom.style-gold label:after {
+    content: "";
+    width: 101%;
+    height:2px;
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.radio-custom.style-gold :checked ~ label:after {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1);    
+}
+
+.radio-custom.style-gold label .add-to-style-gold:after {
+    content: "";
+    height: 104%;
+    width: 2px;
+    position: absolute;
+    right: 0;
+    top: -1.5px;
+    transform: scaley(0);
+    -webkit-transform: scaley(0);
+    -moz-transform: scaley(0);
+    -o-transform: scaley(0);
+    
+    transition: all 1s ease .5s;
+    -webkit-transition: all 1s ease .5s;
+    -moz-transition: all 1s ease .5s;
+    -o-transition: all 1s ease .5s;
+}
+
+.radio-custom.style-gold :checked ~ label .add-to-style-gold:after {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -o-transform: scaleY(1); 
+}
+
+.radio-custom.style-gold label .add-to-style-gold:before {
+    content: "";
+    height: 101%;
+    width: 2px;
+    position: absolute;
+    left: -2px;
+    top: -1px;
+    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    
+    transition: all 1s ease 1s;
+    -webkit-transition: all 1s ease .5s;
+    -moz-transition: all 1s ease .5s;
+    -o-transition: all 1s ease .5s;
+}
+
+.radio-custom.style-gold :checked ~ label .add-to-style-gold:before {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -o-transform: scaleX(1); 
+}
+
+.radio-custom.style-gold.theme-1 label:before,
+.radio-custom.style-gold.theme-1 label:after,
+.radio-custom.style-gold.theme-1 label .add-to-style-gold:before,
+.radio-custom.style-gold.theme-1 label .add-to-style-gold:after {background-color: #0ff}
+.radio-custom.style-gold.theme-1 :checked ~ label {background-color: #e2ffff; color: #2f5405}
+.radio-custom.style-gold.theme-1 label {color: #077}
+
+.radio-custom.style-gold.theme-2 label:before,
+.radio-custom.style-gold.theme-2 label:after,
+.radio-custom.style-gold.theme-2 label .add-to-style-gold:before,
+.radio-custom.style-gold.theme-2 label .add-to-style-gold:after {background-color: #6353a2}
+.radio-custom.style-gold.theme-2 :checked ~ label {background-color: #fff; color: #1121e4}
+.radio-custom.style-gold.theme-2 label {color: #afb1ed}
+
+
+.radio-custom.style-gold.theme-3 label:before,
+.radio-custom.style-gold.theme-3 label:after,
+.radio-custom.style-gold.theme-3 label .add-to-style-gold:before,
+.radio-custom.style-gold.theme-3 label .add-to-style-gold:after {background-color: #f36626}
+.radio-custom.style-gold.theme-3 :checked ~ label {background-color: #e0d5ab; color: #dc3e5b}
+.radio-custom.style-gold.theme-3 label {color: #de7474}
+
+
+.radio-custom.style-gold.theme-4 label:before,
+.radio-custom.style-gold.theme-4 label:after,
+.radio-custom.style-gold.theme-4 label .add-to-style-gold:before,
+.radio-custom.style-gold.theme-4 label .add-to-style-gold:after {background-color: #9e0cf9}
+.radio-custom.style-gold.theme-4 :checked ~ label {background-color: #f7d8f6; color: #d311ea}
+.radio-custom.style-gold.theme-4 label {color: #e57de6}
+
+
+.radio-custom.style-gold.theme-5 label:before,
+.radio-custom.style-gold.theme-5 label:after,
+.radio-custom.style-gold.theme-5 label .add-to-style-gold:before,
+.radio-custom.style-gold.theme-5 label .add-to-style-gold:after {background-color: #1c0dff}
+.radio-custom.style-gold.theme-5 :checked ~ label {background-color: #a3a6f7; color: #701870}
+.radio-custom.style-gold.theme-5 label {color: #ad72ad}
+
+
+.radio-custom.style-gold.theme-6 label:before,
+.radio-custom.style-gold.theme-6 label:after,
+.radio-custom.style-gold.theme-6 label .add-to-style-gold:before,
+.radio-custom.style-gold.theme-6 label .add-to-style-gold:after {background-color: #460063}
+.radio-custom.style-gold.theme-6 :checked ~ label {background-color: #fec6ff; color: #540552}
+.radio-custom.style-gold.theme-6 label {color: #ff00c8}
+
+
+.radio-custom.style-gold.theme-7 label:before,
+.radio-custom.style-gold.theme-7 label:after,
+.radio-custom.style-gold.theme-7 label .add-to-style-gold:before,
+.radio-custom.style-gold.theme-7 label .add-to-style-gold:after {background-color: #ff1800}
+.radio-custom.style-gold.theme-7 :checked ~ label {background-color: #ebf197; color: #9e4302}
+.radio-custom.style-gold.theme-7 label {color: #e08b4e}
+
+
+.radio-custom.style-gold.theme-8 label:before,
+.radio-custom.style-gold.theme-8 label:after,
+.radio-custom.style-gold.theme-8 label .add-to-style-gold:before,
+.radio-custom.style-gold.theme-8 label .add-to-style-gold:after {background-color: #000}
+.radio-custom.style-gold.theme-8 :checked ~ label {background-color: #e2ffff; color: #00aa61}
+.radio-custom.style-gold.theme-8 label {color: #97f7e1}
+
+
+.radio-custom.style-gold.theme-9 label:before,
+.radio-custom.style-gold.theme-9 label:after,
+.radio-custom.style-gold.theme-9 label .add-to-style-gold:before,
+.radio-custom.style-gold.theme-9 label .add-to-style-gold:after {background-color: #000}
+.radio-custom.style-gold.theme-9 :checked ~ label {background-color: #cacaca; color: #000}
+.radio-custom.style-gold.theme-9 label {color: #6f6a6a}

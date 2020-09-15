@@ -1,0 +1,75 @@
+.communicate .users {
+    margin-top: 60px;
+    .search {
+        position: relative;
+        .content {
+            padding: 15px;
+            border: 2px solid #0984e3;
+            border-width: 2px 2px 0 2px;
+            border-radius: 10px 10px 0 0;
+            display: none;
+            form {
+                padding: 20px;
+                label {
+                    font-weight: bold;
+                }
+                .user-type {
+                    text-align: center;
+                    label {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        .button {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            padding: 2px;
+            font-size: 23px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #0984e3;
+            border-radius: 50%;
+            text-align: center;
+            color: #0984e3;
+            &:hover {
+                color: #6c5ce7
+            }
+
+        }
+    }
+    table {
+        text-align: center;
+        font-weight: bold;
+        display: block;
+        @media screen and (min-width: 768px) {
+            display: table;
+        }
+        tbody {
+            tr {
+                &.active {
+                    background-color: rgba(197, 208, 107, 0.6509803921568628);
+                    td {
+                        color: #888
+                    }
+                }
+                td {
+                    vertical-align: middle;
+                    a {
+                        color: #fff;
+                        transition: all .5s ease;
+                        &:hover {
+                            color: #ccc;
+                        }
+                    }
+                    .user-img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

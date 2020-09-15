@@ -1,0 +1,45 @@
+.my-container {
+    max-width: 1400px;   
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+*, *:after, *:before {
+    
+    box-sizing: border-box;
+}
+
+.my-title {
+    color: #444;
+    position: relative;
+    &:after {
+        content: "";
+        width: 50px;
+        height: 3px;
+        margin-bottom: 20px;    
+        background-color: #0984e3;
+        position: absolute;
+        bottom: -25px;
+        left: 2px;
+        //right: auto;
+    }
+}
+
+.new_window_wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #aaaaaaaa;
+    z-index: 21;
+    //display: none;
+    &.active {
+        display: block;
+    }
+    .new_window {
+        background-color: #fff;
+    }
+}

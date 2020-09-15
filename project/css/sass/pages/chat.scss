@@ -1,0 +1,380 @@
+.chat_friend, .chat_group {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(91, 200, 250);
+    overflow: hidden;
+
+    .new_window_wrapper {
+        display: none;
+        .viewer {
+            top: 5%;
+            width: 90%;
+            left: 5%;
+            position: absolute;
+            height: 90%;
+            .close {
+                position: absolute;
+                top: 3px;
+                right: 12px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.9rem;
+                color: #e84118;
+                cursor: pointer;
+                z-index: 20;
+                &:hover {
+                    color: #c23616;
+                }
+            }
+            .content {
+                width: 100%;
+                height: 100%;
+                .image, .video {
+                    width: 90%;
+                    height: 77%;
+                    margin-left: 5%;
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+    
+
+    .top {
+        background-color: #eee;
+        height: 70%;
+        width: 100.9vw;
+        @media screen and (max-width: 770px) {
+            height: 82%;
+        }
+        .myfriends, .groups {
+            border-right: 2px solid #bbb;
+            overflow: scroll;
+            height: 100%;
+            .head {
+                border-bottom: 2px solid #bbb;
+                padding: 10px;
+                text-align: center;
+                background-color: #ccc;
+                .back-btn {
+                    font-size: 25px;
+                }
+                .title {
+                    display: inline-block;
+                }
+            }
+            .body {
+                display: inline-block;
+                padding: 15px;
+                width: 100%;
+                .friend, .group {
+                    border-bottom: 1px solid #aaa;
+                    padding: 8px;
+                    width: 100%;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: all .5s ease-in-out;
+                    &:hover {
+                        background-color: #ccc;
+                    }
+                    &.active {
+                        background-color: #ccc;
+                    }
+                    .user-img, .group-logo {
+                        width: 100px;
+                        height: 100px;
+                        float: left;
+                        margin-right: 15px;
+                        @media screen and (max-width: 1025px) {
+                            width: 100%
+                        }
+                    }
+                    .name {
+                        color: #0d0e5a;
+                        margin-bottom: 0;
+                        margin-top: 15px;
+                        display: inline-block;
+                        @media screen and (max-width: 1025px) {
+                            margin-top: 0;
+                        }
+                    }
+                    .new-messages {
+                        display: inline-block;
+                        position: relative;
+                        left: 4px;
+                        bottom: 2px;
+                    }
+                    .date {
+                        color: #aaa;
+                        padding-left: 10px;
+                        display: block;
+                        &.online {
+                            color: #4cd137;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+            
+        .messages {
+            padding: 10px 35px 10px 55px;
+            @media screen and (max-width: 426px) {
+                padding: 10px 35px 10px 35px;
+            }
+            overflow-y: scroll;
+            height: calc(100% - 70px);
+            @media screen and (min-width: 769px) {
+                height: 100%;
+            }
+            .message {
+                display: block;
+                max-width: 90%;
+                width: auto;
+                padding: 3px 15px 3px 5px;
+                position: relative;
+                .message-content {
+                    display: inline-block;
+                    background-color: #ccc;
+                    padding: 5px 15px;
+                    border-radius: 10px;
+                    word-break: break-all;
+                    word-spacing: wrap;
+                    max-width: 80%;
+                    .image {
+                        width: 100%;
+                        max-height: 200px;
+                    }
+                    .video {
+                        width: 100%;
+                        max-height: 200px;
+                    }
+                    .audio {
+                        width: 100%;
+                        position: relative;
+                    }
+                    .time {
+                        font-size: 12px;
+                        color: #888;
+                        margin-top: 7px;
+                        &.active {
+                            color: #27ae60;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .tools {
+                    display: none;
+                    padding-left: 20px; 
+                    button {
+                        background-color: transparent;
+                        border: none;
+                    }
+                    .seen-time {
+                        color: #888;
+                    }
+                    .show-seens-btn {
+                        color: #009432;
+                        &:hover {
+                            color: #006266;
+                        }
+                    }
+                    .delete-message {
+                        color: #b2bec3;
+                        padding-left: 10px;
+                        &:hover {
+                            color: #d63031;
+                        }
+                    }
+                }
+                /***/
+                &.last-notme, &.lone-notme {
+                    margin-bottom: 20px;
+                }
+                /***/
+                &.first-notme .message-content {
+                    border-bottom-right-radius: 0;
+                }
+                &.middle-notme .message-content{
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                &.last-notme .message-content {
+                    border-top-right-radius: 0;
+                }
+                /***/
+                &.first-me .message-content {
+                    border-bottom-left-radius: 0;
+                }
+                &.middle-me .message-content{
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+                &.last-me .message-content {
+                    border-top-left-radius: 0;
+                }
+                /***/
+                &:not(.me) {
+                    margin-left: auto;
+                    text-align: right;
+                    &.last-notme .message-content:after, &.lone-notme .message-content:after {
+                        content: "";
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-image: var(--image);
+                        position: absolute;
+                        top: 2px;
+                        right: -35px;
+                        background-size: cover;
+                    }
+                    .message-content {
+                        .time {
+                            float: left;
+                            padding: 0 10px 0 0;
+                        }
+                    }
+                }
+                &.me {
+                    margin-right: auto;
+                    text-align: left;
+                    &.checked {
+                        background-color: #74b9ff88;
+                        .tools {
+                            display: inline-block;
+                        }
+                    }
+                    &.last-me .message-content:after, &.lone-me .message-content:after {
+                        content: "";
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-image: var(--image);
+                        position: absolute;
+                        bottom: 2px;
+                        left: -35px;
+                        background-size: cover;
+                    }
+                    .message-content {
+                        background-color: #a2dff7;
+                        .time {
+                            float: right;
+                            padding: 0 0 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+    
+
+    }
+    .bottom {
+        height: 30%;
+        @media screen and (max-width: 770px) {
+            height: 18%;
+        }
+        .make-message {
+            height: 35%;
+            @media screen and (max-width: 770px) {
+                height: 100%;
+            }
+            .message-field {
+                margin: 5px;
+                width: calc(100% - 145px);
+                background-color: #ddd;
+                border-radius: 10px;
+                box-shadow: none;
+                display: inline-block
+            }
+            form {
+                width: 50px;
+                display: inline-block;
+                margin: 5px;
+                position: relative;
+                top: 8px;
+                height: 40px;
+                vertical-align: top;
+                .send, .send-file {
+                    height: 100%;
+                    .send-btn, .send-file-btn {
+                        width: 100%;
+                        height: 100%;
+                        background-color: #a2dff7;
+                    }
+                    .send-img, .send-file-img {
+                        position: absolute;
+                        top: 7%;
+                        left: 15px;
+                        font-size: 20px;
+                        color: #0005ad;
+                    }
+                }
+            }
+        }
+        .emojis {
+            font-size: 28px;
+            overflow: auto;
+            height: 63%;
+            padding: 20px 4px 8px 4px;
+            text-align: center;
+            .emoji {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/****************************** for chating a friend only ************************/
+
+.chat_friend {
+    .top {
+        .right {
+            height: 100%;
+            .header {
+                padding-top: 3px;
+                padding-left: 10px;
+                border-bottom: 2px solid #bbb;
+                overflow: hidden;
+                padding-left: 10px;
+                position: relative;
+                .back {
+                    position: absolute;
+                    top: 20px;
+                    left: 12px;
+                    transform: rotate(315deg);
+                    font-size: 25px;
+                }
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 18px;
+                    margin-left: 30px;
+                    vertical-align: text-bottom;
+                }
+                .data {
+                    width: calc(100% - 110px);
+                    display: inline-block;
+                    .name {
+                        color: #333;
+                        margin-bottom: -3px;
+                        @media screen and (max-width: 376px) {
+                            font-size: 1.7rem;
+                        }
+                    }
+                    .date {
+                        color: #aaa;
+                        margin-left: 20px;
+                        display: block;
+                        &.online {
+                            color: #4cd137;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*********************************************************************************/

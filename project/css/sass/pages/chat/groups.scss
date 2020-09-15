@@ -1,0 +1,74 @@
+.communicate {
+    .chat {
+        .groups {
+            .group {
+                margin-top: 20px;
+                background-color: #44f;
+                border-radius: 20px;
+                padding: 10px 5px;
+                cursor: pointer;
+                &:hover {
+                    background-color: #059;
+                    .left {
+                        .name {
+                            color: #ccc;
+                        }
+                    }
+                }
+                .left {
+                    display: inline-block;    
+                    .group-logo {
+                        margin: 0 20px 0 0;
+                        width: 100px;
+                        height: 100px;
+                        border: 1px solid #eee;
+                        border-radius: 50%;
+                        padding: 1px;
+                        vertical-align: middle;
+                    }
+                    .name {
+                        color: #0d0e5a;
+                        margin-bottom: 0;
+                        margin-top: 15px;
+                        display: inline-block;
+                    }
+                    .new-messages {
+                        display: inline-block;
+                        position: relative;
+                        left: 4px;
+                        bottom: 2px;
+                    }
+                }
+                .right {
+                    display: inline-block;
+                    text-align: right;
+                    @media screen and (max-width: 426px) {
+                        text-align: center;
+                        margin-top: -30px;
+                    }
+                    @media screen and (max-width: 321px) {
+                        margin-left: 40px;
+                    }
+                    svg {
+                        font-size: 35px;
+                        position: relative;
+                        top: 8px;
+                        margin: 0 3px;
+                        &.pin {
+                            color: #ccc;
+                            &.active {
+                                color: #00b894;
+                            }
+                        }
+                        &.info {
+                            color: #54a0ff;
+                            &:hover {
+                                color: #01a3a4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

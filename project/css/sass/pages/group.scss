@@ -1,0 +1,351 @@
+.chat_group {
+    .new_window_wrapper {
+        display: none;
+        .group-settings {
+            width: 55%;
+            height: 80%;
+            position: absolute;
+            padding-top: 40px;
+            top: 10%;
+            left: 22.5%;
+            .close {
+                position: absolute;
+                top: 3px;
+                right: 12px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.9rem;
+                color: #e84118;
+                cursor: pointer;
+                z-index: 20;
+                &:hover {
+                    color: #c23616;
+                }
+            }
+            > div:not(:last-of-type){
+                position: relative;
+                padding-bottom: 10px;
+                &:after {
+                    content: "";
+                    width: 80%;
+                    height: 1px;
+                    position: absolute;
+                    left: 10%;
+                    bottom: -10px;
+                    background-color: #ccc;
+                }
+            }
+            .header {
+                padding-bottom: 0px !important;
+                .settings-top {
+                    width: 100.9%;
+                    .img {
+                        height: 100%;
+                        position: relative;
+                        .group_logo {
+                            width: 100%;
+                            height: 300px;
+                        }
+                        .cover {
+                            background-color: #eeeeee77;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+
+                        }
+                        .change-logo {
+                            position: absolute;
+                            bottom: 0px;
+                            right: 20px;
+                            width: 40px;
+                            height: 40px;
+                            z-index: 2;
+                            cursor: pointer;
+                            &:hover {
+                                svg {
+                                    color: #333;
+                                }
+                            }
+                            svg {
+                                color: #999;
+                                font-size: 30px;
+                                cursor: pointer;
+                            }
+                            input {
+                                opacity: 0;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 1;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .data {
+                        @media screen and (min-width: 426px) {
+                            padding-left: 0;
+                        }
+                        .name {
+                            height: 20%;
+                            @media screen and (max-width: 426px) {
+                                height: auto;
+                                margin-top: 8px;
+                            }
+                            input {
+                                color: #333;
+                                font-size: 28px;
+                                font-weight: 500;
+                            }
+                        } 
+                        .description {
+                            height: 80%;
+                            @media screen and (max-width: 426px) {
+                                height: auto;
+                            }
+                            textarea {
+                                color: #777;
+                                font-weight: 500;
+                                padding-left: 10px;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .members, .requests {
+                padding: 20px 15px;
+                .member, .user {
+                    margin-top:15px;
+                    padding: 10px 0 0 10px;
+                    position: relative;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        padding: 1px;
+                        background-color: #aaa;
+                        vertical-align: middle;
+                        position: relative;
+                        top: -5px;
+                    }
+                    .name {
+                        display: inline-block;
+                        padding-left: 7px;
+                        color: #333;
+                    }
+                    .rank{
+                        margin-left: 8px;
+                    }
+                    .tools {
+                        float: right;
+                        padding-right: 20px;
+                        position: relative;
+                        top: 16px;
+                        transition: all .7s ease-in-out;
+                        @media screen and (max-width: 426px) {
+                            top: 0;
+                        }
+                        svg {
+                            //font-size: 20px;
+                            margin-left: 10px; 
+                        }
+                    }
+                    &:hover {
+                        background-color: #eee;
+                    }
+                    &:not(:last-of-type):after {
+                        content: "";
+                        width: 60%;
+                        height: 1px;
+                        position: absolute;
+                        left: 20%;
+                        bottom: -8px;
+                        background-color: #ccc;
+                    }
+                }
+            }
+        }
+        .messages_seens {
+            width: 55%;
+            height: 60%;
+            position: absolute;
+            padding: 40px 20px 0;
+            top: 20%;
+            left: 22.5%;
+            overflow: auto;
+            .close {
+                position: absolute;
+                top: 3px;
+                right: 12px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.9rem;
+                color: #e84118;
+                cursor: pointer;
+                z-index: 20;
+                &:hover {
+                    color: #c23616;
+                }
+            }
+            .content {
+                .member {
+                    position: relative;
+                    padding-bottom: 8px;
+                    padding-top: 8px;
+                    &:not(:last-of-type):after {
+                        content: "";
+                        position: absolute;
+                        left: 10%;
+                        bottom: 0;
+                        width: 80%;
+                        height: 1px;
+                        background-color: #eee;
+                    }
+                    .image {
+                        width: 100px;
+                        height: 100px;
+                        vertical-align: middle;
+                        display: inline-block;
+                        padding: 1px;
+                        border: 1px solid #eee;
+                    }
+                    .name {
+                        display: inline-block;
+                        padding-left: 10px;
+                        color: #333;
+                    }
+                    .seen {
+                        display: inline-block;
+                        padding-left: 30px;
+                        font-weight: 500;
+                        position: relative;
+                        font-size: 14px;
+                        bottom: 2px;
+                        color: #999;
+                        &.now {
+                            color: #4cd137; 
+                        }
+                        &.unseen {
+                            color: #aaa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .top {
+        .groups {
+            .body {
+                .group {
+                    @media screen and (max-width: 1026px) {
+                        text-align: center;
+                    }
+                    .group-logo {
+                        border-radius: 50%;
+                        border: 1px solid #999;
+                        padding: 2px;
+                        vertical-align: middle;
+                        float: none !important;
+                    }
+                }
+            }
+        }
+        .right {
+            height: 100%;
+            .header {
+                padding-top: 3px;
+                padding-left: 10px;
+                border-bottom: 2px solid #bbb;
+                overflow: hidden;
+                height: 70px;
+                position: relative;
+                .back {
+                    position: absolute;
+                    top: 20px;
+                    left: 12px;
+                    transform: rotate(315deg);
+                    font-size: 25px;
+                }
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 18px;
+                    margin-left: 30px;
+                    vertical-align: top;
+                    position: relative;
+                    top: 6px;
+                    left: 7px;
+                    @media screen and (max-width: 426px) {
+                        vertical-align: bottom;
+                    }
+                }
+                .data {
+                    width: calc(100% - 425px);
+                    display: inline-block;
+                    .name {
+                        color: #333;
+                        margin-bottom: -3px;
+                        @media screen and (max-width: 321px) {
+                            font-size: 28px;
+                        }
+                    }
+                    .members {
+                        padding-left: 15px;
+                        @media screen and (max-width: 426px) {
+                            display: none;
+                        }
+                        .member {
+                            color: #777;
+                            padding-right: 5px;
+                            &:not(:last-of-type):after {
+                                content: ",";
+                            }
+                            &.active {
+                                color: #007bff;
+                            }
+                        }
+                    }
+                }
+                .tools {
+                    float: right;
+                    padding-right: 50px;
+                    max-width: 308px;
+                    text-align: right;
+                    @media screen and (max-width: 1441px) {
+                        padding-right: 15px;
+                    }
+                    @media screen and (max-width: 426px) {
+                        padding-right: 15px;
+                    }
+                    a, button {
+                        @media screen and (max-width: 426px) {
+                            padding-right: 0;
+                        }
+                        @media screen and (max-width: 321px) {
+                            padding-left: 5px;
+                        }
+                    }
+                    button {
+                        background-color: transparent;
+                    }
+                    svg {
+                        font-size: 37px;
+                        @media screen and (max-width: 321px) {
+                            font-size: 25px;
+                            margin-top: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .messages {
+            overflow-y: scroll;
+            height: calc(100% - 70px);
+        }
+    }
+}

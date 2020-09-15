@@ -1,0 +1,135 @@
+.main-navbar {
+    .nav-right {
+        position: relative;
+        @media screen and (max-width: 426px) {
+            margin-top: 16px;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            &:before {
+                content: "";
+                width: 80%;
+                height: 1px;
+                background-color: #ddd;
+                position: absolute;
+                left: 10%;
+                top: -10px;
+            }
+            .nav-link {
+                padding-right: .5rem;
+                padding-left: .5rem; 
+            }
+            .logout-item {
+                margin-top: 5px;
+                width: 100%;
+            }
+            .notification.show {
+                .notifies {
+                    position: absolute;
+                    background-color: #05798cdd;
+                    right: -104px;
+                    width: 400px;
+                    border-radius: 20px;
+                    &::before {
+                        right: 85px;
+                    }
+                }
+            }
+        }
+        .user-name {
+            color: #fff !important;
+            font-weight: bold;
+        }
+        .user-image {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #eee;
+            border-radius: 50%;
+            padding: 1px;
+        }
+        .notification {
+            margin-right: 10px;
+            .notify-btn {
+                .notify-icon {
+                    color: #fff;
+                }
+                &:after {
+                    display: none;
+                }
+                &.new-notifies:before {
+                    content: "";
+                    position: absolute;
+                    right: 17px;
+                    top: 13px;
+                    width: 7px;
+                    background-color: #f00;
+                    height: 7px;
+                    border-radius: 50%;
+                }
+            }
+            .notifies {
+                right: 4px;
+                left: auto;
+                top: 120%;
+                background-color: #05798c;
+                border-radius: 20px 0 20px 20px;
+                width: 800px;
+                @media screen and (max-width: 769px) {
+                    width: 500px;
+                }
+                @media screen and (max-width: 376px) {
+                    width: 370px !important;
+                }
+                @media screen and (max-width: 321px) {
+                    width: 314px !important;
+                    right: -76px !important;
+                }
+                a {
+                    color: #aaa;
+                    transition: all .5s ease;
+                    border-radius: 20px 0 0 20px;
+                    svg {
+                        margin-right: 10px;
+                        display: inline-block;
+                    }
+                    &:hover {
+                        color: #fff;
+                        padding-left: 28px;
+                        background-color: #05798c;
+                    }
+                    .content {
+                        width: 80%;
+                        word-wrap: break-word;
+                        display: inline-block;
+                    }
+                    .date {
+                        margin-left: 5px;
+                        color: #999;
+                        display: inline-block;
+                    }
+                    &:not(:last-child)::after {
+                        content: "";
+                        position: absolute;
+                        bottom : -2px;
+                        left: 10%;
+                        width: 80%;
+                        height: 1px;
+                        background-color: #777;
+                    }
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    border-width: 18px;
+                    border-color: transparent transparent #05798c transparent;
+                    border-style: solid;
+                    top: -35px;
+                    right: 2px;
+                }
+            }
+        }
+        .logout {
+            color: #fff !important
+        }
+    }
+}

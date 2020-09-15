@@ -1,0 +1,156 @@
+.communicate {
+    .search {
+        margin-top: 60px;
+        position: relative;
+        .content {
+            padding: 15px;
+            border: 2px solid #0984e3;
+            border-width: 2px 2px 2px 2px;
+            border-radius: 10px;
+            display: none;
+            form {
+                padding: 20px;
+                label {
+                    font-weight: bold;
+                }
+                .user-type {
+                    text-align: center;
+                    label {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        .button {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            padding: 2px;
+            font-size: 23px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #0984e3;
+            border-radius: 50%;
+            text-align: center;
+            color: #0984e3;
+            &:hover {
+                color: #6c5ce7
+            }
+
+        }
+    }
+
+    .friends {
+        .new_window_wrapper {
+            display: none;
+            .friend-settings {
+                width: 55%;
+                position: absolute;
+                padding: 20px;
+                padding-top: 40px;
+                top: 40%;
+                left: 22.5%;
+                .close {
+                    position: absolute;
+                    top: 3px;
+                    right: 12px;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 1.9rem;
+                    color: #e84118;
+                    cursor: pointer;
+                    z-index: 20;
+                    &:hover {
+                        color: #c23616;
+                    }
+                }
+            }
+        }
+
+        .friend {
+            margin-top: 20px;
+            background-color: #44f;
+            border-radius: 20px;
+            padding: 10px 5px;
+            cursor: pointer;
+            &:hover {
+                background-color: #059;
+                .left {
+                    .name {
+                        color: #ccc;
+                    }
+                }
+            }
+            .left {
+                display: inline-block;    
+                .user-image {
+                    float: left;
+                    margin: 0 20px 0 0;
+                    width: 100px;
+                    height: 100px;
+                    border: 1px solid #eee;
+                    border-radius: 50%;
+                    padding: 1px;
+                }
+                .name {
+                    color: #0d0e5a;
+                    margin-bottom: 0;
+                    margin-top: 15px;
+                    display: inline-block;
+                }
+                .new-messages {
+                    display: inline-block;
+                    position: relative;
+                    left: 4px;
+                    bottom: 2px;
+                }
+                .date {
+                    color: #aaa;
+                    padding-left: 10px;
+                    display: block;
+                    &.online {
+                        color: #4cd137;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .right {
+                display: inline-block;
+                text-align: right;
+                @media screen and (max-width: 426px) {
+                    text-align: center;
+                    margin-top: -30px;
+                }
+                @media screen and (max-width: 321px) {
+                    margin-left: 80px;
+                }
+                .settings{
+                    background-color: transparent;
+                    border: none;
+                    svg {
+                        color: #ff8d00
+                    }
+                }
+                svg {
+                    font-size: 35px;
+                    position: relative;
+                    top: 8px;
+                    margin: 0 3px;
+                    &.favourite {
+                        color: #ccc;
+                        &.active {
+                            color: #f00;
+                        }
+                    }
+                    &.info {
+                        color: #54a0ff;
+                        &:hover {
+                            color: #01a3a4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
